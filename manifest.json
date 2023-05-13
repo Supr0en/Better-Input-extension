@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Better Input",
+    "description": "Better Input lets you add",
+    "version": "1.0",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+     {
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "scripts/index.js"
+        ]
+     }   
+    ]
+}
