@@ -11,7 +11,7 @@ const position = (element, replacement) => {
     element.setSelectionRange(cursorEnd + 1, cursorEnd + 1);
 }
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keypress', function(event) {
     var focusedInput = document.activeElement;
     
     if (focusedInput) {
@@ -29,9 +29,9 @@ document.addEventListener('keydown', function(event) {
             switch (event.key) {
                 case '"': position(focusedInput, `"`); break; 
                 case "'": position(focusedInput, `'`); break; 
-                case '(': position(focusedInput, `)`); break; 
-                case '{': position(focusedInput, `}`); break; 
-                case '[': position(focusedInput, `]`); break; 
+                case ')': position(focusedInput, `(`); break; 
+                case '}': position(focusedInput, `{`); break; 
+                case ']': position(focusedInput, `[`); break; 
             }
         }
     }
